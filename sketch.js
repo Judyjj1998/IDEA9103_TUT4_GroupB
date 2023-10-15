@@ -1,16 +1,16 @@
 let numberShapes = 50; 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight); //Creating the canvas to the size of the window
   noLoop(); //Stopping the draw function so the rectangles are static - reference p5.js website
 
 }
 
 function draw() {
-  background(255); 
-  //Need to fix so the rectangles dont move 
+  background(255); //Setting the background to white
+  //Calling the function drawShapes to draw multiple rectangles 
   drawShapes();
-    // drawRect();
+    
 }
 
 function drawShapes() {
@@ -22,8 +22,3 @@ function drawShapes() {
     rect(x, y, rectSize, rectSize);
   }
 }
-
-// function drawRect(){
-//   rect(windowWidth/4, windowHeight/3, 50,30,0,0,237);
-//   rect(windowWidth/2, windowHeight/6, 50,30,0,0,237);
-// }
