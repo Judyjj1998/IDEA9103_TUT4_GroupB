@@ -21,7 +21,7 @@ function drawBlueShapes() {
     fill(0, 0, 240);
     let x = random(width);
     let y = random(height);
-    let rectSize = random(100, 200); 
+    let rectSize = random(width * 0.5, width * 0.5); 
     rect(x, y, rectSize, rectSize);
   }
 }
@@ -31,7 +31,7 @@ function drawYellowShapes() {
     fill(237, 222, 0);
     let x = random(width);
     let y = random(height);
-    let rectSize = random(20, 50); 
+    let rectSize = random(width * 0.5, width * 0.5); 
     rect(x, y, rectSize, rectSize);
     
   }
@@ -41,7 +41,12 @@ function drawGreyShapes() {
     fill(210);
     let x = random(width);
     let y = random(height);
-    let rectSize = random(10, 15); 
+    let rectSize = random(width * 0.05, width * 0.05); 
     rect(x, y, rectSize, rectSize);
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight); //Responsive design to calculate the size of the canvas based on the window dimensions
+
 }
